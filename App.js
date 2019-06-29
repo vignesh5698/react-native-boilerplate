@@ -20,21 +20,53 @@ import FirstComponent from './FisrtComponent';
 
     render() {
       return (
-        <View>
-          <Text style={styles.welcome}>Hello Vignesh..!!</Text>
-          <Text style={styles.welcome}>Hello {this.state.name}</Text>
-          <FirstComponent/>
+        <View style={styles.parentContainer}>
+          <View style={styles.container1}>
+            <View>
+              <Text style={styles.welcome}>Hello Vignesh From One..!!</Text>
+              <Text style={styles.welcome}>Hello {this.state.name}</Text>
+            </View>
+            <View>
+              <Text style={styles.welcome}>Hello Vignesh From Two..!!</Text>
+              <Text style={styles.welcome}>Hello {this.state.name}</Text>
+            </View>
+          </View>
+          <View style={styles.container2}>
+            <FirstComponent/>
+          </View>
+          <View style={styles.container3}>
+            <Text>Hello FRom 3</Text>
+          </View>
         </View>
+        
       );
     }
   }
 
   const styles = StyleSheet.create({
-    container: {
-      flex: 2,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#F5FCFF',
+    parentContainer: {
+      flexDirection: 'column',
+      backgroundColor: 'grey',
+      flex:1
+    },
+    container1: {
+      // flex: 2,
+      flexDirection: 'row',
+      height:200,
+      width: 200,
+      backgroundColor: 'pink',
+    },
+    container2: {
+      // flex: 2,
+      flexDirection: 'row',
+      height:200,
+      backgroundColor: 'red',
+    },
+    container3: {
+      // flex: 2,
+      flexDirection: 'row',
+      height:50,
+      backgroundColor: 'grey',
     },
     welcome: {
       fontSize: 20,

@@ -24,7 +24,7 @@ export default class FirstComponent extends Component {
 const styles=StyleSheet.create({
     text1: {
         color:'red',
-        backgroundColor: 'pink'
+        backgroundColor: 'yellow'
     }
 })
 AppRegistry.registerComponent('FirstComponent', () => FirstComponent)
