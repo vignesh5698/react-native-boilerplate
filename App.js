@@ -21,7 +21,7 @@ import FirstComponent from './FisrtComponent';
     render() {
       return (
         <View>
-          <Text style={styles.welcome}>Hello Vignesh...!!</Text>
+          <Text style={styles.welcome}>Hello Vignesh..!!</Text>
           <Text style={styles.welcome}>Hello {this.state.name}</Text>
           <FirstComponent/>
         </View>
