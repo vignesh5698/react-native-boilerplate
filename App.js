@@ -7,8 +7,9 @@
    */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import FirstComponent from './FisrtComponent';
+import SecondComponent from './SecondComponent';
   export default class App extends Component{
 
     constructor(props){
@@ -21,21 +22,25 @@ import FirstComponent from './FisrtComponent';
     render() {
       return (
         <View style={styles.parentContainer}>
+        <TouchableOpacity
+                style={styles.opacity}
+              >
           <View style={styles.container1}>
             <View>
-              <Text style={styles.welcome}>Hello Vignesh From One..!!</Text>
-              <Text style={styles.welcome}>Hello {this.state.name}</Text>
+                <Text style={styles.welcome}>Hello Vignesh From One..!!</Text>
+                <Text style={styles.welcome}>Hello {this.state.name}</Text>
             </View>
             <View>
               <Text style={styles.welcome}>Hello Vignesh From Two..!!</Text>
               <Text style={styles.welcome}>Hello {this.state.name}</Text>
             </View>
           </View>
+          </TouchableOpacity>
           <View style={styles.container2}>
             <FirstComponent/>
           </View>
           <View style={styles.container3}>
-            <Text>Hello FRom 3</Text>
+            <SecondComponent/>
           </View>
         </View>
         
@@ -79,4 +84,7 @@ import FirstComponent from './FisrtComponent';
       color: '#333333',
       marginBottom: 5,
     },
+    opacity: {
+      color: 'black'
+    }
   });
