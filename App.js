@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import FirstComponent from './FisrtComponent';
 import SecondComponent from './SecondComponent';
+import C from './C';
   export default class App extends Component{
 
     constructor(props){
@@ -40,7 +41,8 @@ import SecondComponent from './SecondComponent';
             <FirstComponent/>
           </View>
           <View style={styles.container3}>
-            <SecondComponent/>
+          <SecondComponent/>
+          <C/>
           </View>
         </View>
         
